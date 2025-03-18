@@ -25,5 +25,6 @@ urlpatterns = [
     path('api/auth/logout/', TokenBlacklistView.as_view(), name='token_blacklist'),
 
     path('api/users/', include('users.urls')),
+    path('api/medicines/', include('inventory.urls')),
 ]
     

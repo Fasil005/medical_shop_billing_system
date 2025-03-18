@@ -37,8 +37,9 @@ INSTALLED_APPS = [
 
     #exteranal apps
     "users",
+    "inventory",
 
-    #internal apps
+    #utility apps
     'utilsLib',
 
 ]
@@ -108,7 +109,7 @@ SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(days=1),
     "REFRESH_TOKEN_LIFETIME": timedelta(days=7),
     "BLACKLIST_AFTER_ROTATION": True,
-    "UPDATE_LAST_LOGIN": True
+    "UPDATE_LAST_LOGIN": True,
 }
 
 # Password validation

@@ -1,0 +1,10 @@
+[
+    {"model": "inventory.category", "fields": {"name": "Tablets"}},
+    {"model": "inventory.category", "fields": {"name": "Capsules"}},
+    {"model": "inventory.category", "fields": {"name": "Syrups"}},
+    {"model": "inventory.category", "fields": {"name": "Injections"}},
+    {"model": "inventory.category", "fields": {"name": "Ointments"}},
+    {"model": "inventory.category", "fields": {"name": "Creams"}},
+    {"model": "inventory.category", "fields": {"name": "Drops"}},
+    {"model": "inventory.category", "fields": {"name": "Inhalers"}}
+]
