@@ -1,0 +1,74 @@
+[
+    {
+        "model": "inventory.medicinepackaging",
+        "fields": {
+            "medicine": 1,
+            "packaging_type": "single",
+            "units_per_package": 1,
+            "price_per_package": 2.00
+        }
+    },
+    {
+        "model": "inventory.medicinepackaging",
+        "fields": {
+            "medicine": 1,
+            "packaging_type": "strip",
+            "units_per_package": 10,
+            "price_per_package": 15.00
+        }
+    },
+    {
+        "model": "inventory.medicinepackaging",
+        "fields": {
+            "medicine": 1,
+            "packaging_type": "pack",
+            "units_per_package": 100,
+            "price_per_package": 120.00
+        }
+    },
+    {
+        "model": "inventory.medicinepackaging",
+        "fields": {
+            "medicine": 1,
+            "packaging_type": "box",
+            "units_per_package": 1000,
+            "price_per_package": 1000.00
+        }
+    },
+    {
+        "model": "inventory.medicinepackaging",
+        "fields": {
+            "medicine": 2,
+            "packaging_type": "single",
+            "units_per_package": 1,
+            "price_per_package": 3.00
+        }
+    },
+    {
+        "model": "inventory.medicinepackaging",
+        "fields": {
+            "medicine": 2,
+            "packaging_type": "strip",
+            "units_per_package": 10,
+            "price_per_package": 20.00
+        }
+    },
+    {
+        "model": "inventory.medicinepackaging",
+        "fields": {
+            "medicine": 2,
+            "packaging_type": "pack",
+            "units_per_package": 100,
+            "price_per_package": 180.00
+        }
+    },
+    {
+        "model": "inventory.medicinepackaging",
+        "fields": {
+            "medicine": 2,
+            "packaging_type": "box",
+            "units_per_package": 1000,
+            "price_per_package": 1700.00
+        }
+    }
+]

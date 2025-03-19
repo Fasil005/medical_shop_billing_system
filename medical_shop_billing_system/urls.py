@@ -24,7 +24,12 @@ urlpatterns = [
     path('api/auth/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('api/auth/logout/', TokenBlacklistView.as_view(), name='token_blacklist'),
 
+    path('api/notifications/', include('utilsLib.urls')),
+
     path('api/users/', include('users.urls')),
-    path('api/medicines/', include('inventory.urls')),
+    path('api/medicines/', include('inventory.urls.medicines')),
+    path('api/inventory/', include('inventory.urls.inventory')),
+    path('api/dashboard/', include('inventory.urls.dashboard')),
+    path('api/billing/', include('inventory.urls.billing')),
 ]
     

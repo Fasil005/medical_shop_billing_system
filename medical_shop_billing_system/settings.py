@@ -2,6 +2,8 @@ import os
 from pathlib import Path
 from datetime import timedelta
 from celery import Celery
+from celery.schedules import crontab
+
 
 from utilsLib.logger import LOGGING
 
@@ -91,6 +93,7 @@ REST_FRAMEWORK = {
 
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
     'EXCEPTION_HANDLER': 'utilsLib.excpetion_handler.custom_exception_handler',
+    'DEFAULT_FILTER_BACKENDS': ['rest_framework.filters.OrderingFilter'],
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
@@ -132,7 +135,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = True
 
@@ -162,3 +165,22 @@ CELERY_RESULT_BACKEND = f'redis://{os.environ.get("REDIS_HOSTNAME")}:{os.environ
 
 
 LOGGING = LOGGING
+
+# Email configurations
+# EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+EMAIL_HOST = "smtp.gmail.com" 
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = os.environ.get('HOST_EMAIL_USER') or "test@test.com"
+EMAIL_HOST_PASSWORD = os.environ.get('HOST_EMAIL_PASSORD')
+DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_EMAIL_USER')
+
+
+# Celery Cron Jobs
+CELERY_BEAT_SCHEDULE = {
+    "check_low_stock_daily": {
+        "task": "inventory.tasks.stock_replenishment_reminders",
+        "schedule": crontab(hour=7, minute=30), 
+    },
+}
