@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     "rest_framework_simplejwt.token_blacklist",
     'drf_spectacular',
     'django_ses',
+    'django_filters',
 
     #exteranal apps
     "users",
@@ -93,7 +94,11 @@ REST_FRAMEWORK = {
 
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
     'EXCEPTION_HANDLER': 'utilsLib.excpetion_handler.custom_exception_handler',
-    'DEFAULT_FILTER_BACKENDS': ['rest_framework.filters.OrderingFilter'],
+    "DEFAULT_FILTER_BACKENDS": [
+        "django_filters.rest_framework.DjangoFilterBackend",
+        "rest_framework.filters.OrderingFilter", 
+        "rest_framework.filters.SearchFilter", 
+    ],
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),

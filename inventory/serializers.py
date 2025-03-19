@@ -116,3 +116,22 @@ class InvoiceSerializer(serializers.ModelSerializer):
         process_invoice.delay(invoice.id)
 
         return invoice
+    
+
+class StaffSalesReportSerializer(serializers.Serializer):
+
+    staff_id = serializers.IntegerField()
+    staff_name = serializers.CharField()
+    total_amount_billed = serializers.IntegerField()
+    total_medicines_sold = serializers.IntegerField()
+    total_invoice_generated = serializers.IntegerField()
+
+
+class SalesReportSerializer(serializers.Serializer):
+    """Serializer for formatted sales report response"""
+    
+    start_date = serializers.DateField()
+    end_date = serializers.DateField()
+    total_billed_amount = serializers.DecimalField(max_digits=12, decimal_places=2)
+    total_sold_medicines = serializers.IntegerField()
+    total_stocks_available_medicine_count = serializers.IntegerField()
