@@ -1,0 +1,525 @@
+{
+	"info": {
+		"_postman_id": "3f850917-8901-475f-86be-1142592598d8",
+		"name": "Medical Shop Billing System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "29832234"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"test_user@test.com\",\r\n    \"password\": \"test_user@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/auth/login/"
+			},
+			"response": []
+		},
+		{
+			"name": "Log Out",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"test_user@test.com\",\r\n    \"password\": \"test_user@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/auth/logout/"
+			},
+			"response": []
+		},
+		{
+			"name": "User Registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"test_user@test.com\",\r\n    \"password\": \"test_user@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/auth/login/"
+			},
+			"response": []
+		},
+		{
+			"name": "User List",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQyMzk4NzcxLCJpYXQiOjE3NDIzMTIzNzEsImp0aSI6ImJkYTAyMjk0MjYxMDQwZDg4YjcyNDNlOTRjYmU0MzQ5IiwidXNlcl9pZCI6IjA2Yjc0OWI1LTJjYzMtNDg3Yy1iMTA4LTgxYmE2MmE5ZDIzMCJ9.ZbQrZr7Wc6c4dJWk4uZmAU1S9i1Ioaw5sFVnSCy4fdY"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"test_user@test.com\",\r\n    \"password\": \"test_user@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/users/"
+			},
+			"response": []
+		},
+		{
+			"name": "Single User Management",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQyMzgzMTUzLCJpYXQiOjE3NDIyOTY3NTMsImp0aSI6IjExYzMyMGJiZmFmNDQ5Nzg5NGViZTlkNWNmMDFiMDJjIiwidXNlcl9pZCI6Mn0.uhZngwURS2ADckJYAniMnMU7Kn25SWtCyogncc5jf8w"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"test@08\",\r\n    \"password\": \"Test@005\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/users/3/"
+			},
+			"response": []
+		},
+		{
+			"name": "Medicine Category List",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQyMzgzMTUzLCJpYXQiOjE3NDIyOTY3NTMsImp0aSI6IjExYzMyMGJiZmFmNDQ5Nzg5NGViZTlkNWNmMDFiMDJjIiwidXNlcl9pZCI6Mn0.uhZngwURS2ADckJYAniMnMU7Kn25SWtCyogncc5jf8w"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/medicines/category/"
+			},
+			"response": []
+		},
+		{
+			"name": "Medicine Management",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQyMzgzMTUzLCJpYXQiOjE3NDIyOTY3NTMsImp0aSI6IjExYzMyMGJiZmFmNDQ5Nzg5NGViZTlkNWNmMDFiMDJjIiwidXNlcl9pZCI6Mn0.uhZngwURS2ADckJYAniMnMU7Kn25SWtCyogncc5jf8w"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "// {\r\n//     \"name\": \"Paracetamol\",\r\n//     \"category\": \"1\",  // Replace with an actual category ID from your database\r\n//     \"packaging_type\": \"strip\",\r\n//     \"price\": 15.00,\r\n//     \"stock\": 100,\r\n//     \"expiry_date\": \"2025-06-30\"\r\n// }\r\n\r\n{\r\n    \"name\": \"Amoxicillin\",\r\n    \"category\": \"2\",  \r\n    \"packaging_type\": \"box\",\r\n    \"price\": 250.00,\r\n    \"stock\": 50,\r\n    \"expiry_date\": \"2026-01-15\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/medicines/"
+			},
+			"response": []
+		},
+		{
+			"name": "Single Medicine Management",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQyMzgzMTUzLCJpYXQiOjE3NDIyOTY3NTMsImp0aSI6IjExYzMyMGJiZmFmNDQ5Nzg5NGViZTlkNWNmMDFiMDJjIiwidXNlcl9pZCI6Mn0.uhZngwURS2ADckJYAniMnMU7Kn25SWtCyogncc5jf8w"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Paracetamol\",\r\n    \"category\": \"1\",  // Replace with an actual category ID from your database\r\n    \"packaging_type\": \"strip\",\r\n    \"price\": 17.00,\r\n    \"stock\": 200,\r\n    \"expiry_date\": \"2025-06-30\"\r\n}\r\n\r\n// {\r\n//     \"name\": \"Amoxicillin\",\r\n//     \"category\": \"2\",  \r\n//     \"packaging_type\": \"box\",\r\n//     \"price\": 250.00,\r\n//     \"stock\": 50,\r\n//     \"expiry_date\": \"2026-01-15\"\r\n// }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/medicines/2/"
+			},
+			"response": []
+		},
+		{
+			"name": "Single Medicine Packaging Management",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQyMzgzMTUzLCJpYXQiOjE3NDIyOTY3NTMsImp0aSI6IjExYzMyMGJiZmFmNDQ5Nzg5NGViZTlkNWNmMDFiMDJjIiwidXNlcl9pZCI6Mn0.uhZngwURS2ADckJYAniMnMU7Kn25SWtCyogncc5jf8w"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Paracetamol\",\r\n    \"category\": \"1\",  // Replace with an actual category ID from your database\r\n    \"packaging_type\": \"strip\",\r\n    \"price\": 17.00,\r\n    \"stock\": 200,\r\n    \"expiry_date\": \"2025-06-30\"\r\n}\r\n\r\n// {\r\n//     \"name\": \"Amoxicillin\",\r\n//     \"category\": \"2\",  \r\n//     \"packaging_type\": \"box\",\r\n//     \"price\": 250.00,\r\n//     \"stock\": 50,\r\n//     \"expiry_date\": \"2026-01-15\"\r\n// }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/inventory/packaging/23/"
+			},
+			"response": []
+		},
+		{
+			"name": "Medicine Packaging Management",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQyMzgzMTUzLCJpYXQiOjE3NDIyOTY3NTMsImp0aSI6IjExYzMyMGJiZmFmNDQ5Nzg5NGViZTlkNWNmMDFiMDJjIiwidXNlcl9pZCI6Mn0.uhZngwURS2ADckJYAniMnMU7Kn25SWtCyogncc5jf8w"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Paracetamol\",\r\n    \"category\": \"1\",  // Replace with an actual category ID from your database\r\n    \"packaging_type\": \"strip\",\r\n    \"price\": 17.00,\r\n    \"stock\": 200,\r\n    \"expiry_date\": \"2025-06-30\"\r\n}\r\n\r\n// {\r\n//     \"name\": \"Amoxicillin\",\r\n//     \"category\": \"2\",  \r\n//     \"packaging_type\": \"box\",\r\n//     \"price\": 250.00,\r\n//     \"stock\": 50,\r\n//     \"expiry_date\": \"2026-01-15\"\r\n// }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/inventory/packaging/"
+			},
+			"response": []
+		},
+		{
+			"name": "Stock Management",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQyMzgzMTUzLCJpYXQiOjE3NDIyOTY3NTMsImp0aSI6IjExYzMyMGJiZmFmNDQ5Nzg5NGViZTlkNWNmMDFiMDJjIiwidXNlcl9pZCI6Mn0.uhZngwURS2ADckJYAniMnMU7Kn25SWtCyogncc5jf8w"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "// {\r\n//     \"medicine\": \"2\",  // Replace with an actual category ID from your database\r\n//     \"packaging_type\": \"strip\",\r\n//     \"price\": 17.00,\r\n//     \"stock\": 200,\r\n//     \"expiry_date\": \"2025-06-30\"\r\n// }\r\n\r\n{\r\n    \"medicine\": \"2\",  \r\n    \"packaging\": 23,\r\n    \"price\": 252.00,\r\n    \"stock\": 50,\r\n    \"expiry_date\": \"2026-01-19\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/inventory/stocks/"
+			},
+			"response": []
+		},
+		{
+			"name": "Single Stock Management",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQyMzgzMTUzLCJpYXQiOjE3NDIyOTY3NTMsImp0aSI6IjExYzMyMGJiZmFmNDQ5Nzg5NGViZTlkNWNmMDFiMDJjIiwidXNlcl9pZCI6Mn0.uhZngwURS2ADckJYAniMnMU7Kn25SWtCyogncc5jf8w"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "// {\r\n//     \"medicine\": \"2\",  // Replace with an actual category ID from your database\r\n//     \"packaging_type\": \"strip\",\r\n//     \"price\": 17.00,\r\n//     \"stock\": 200,\r\n//     \"expiry_date\": \"2025-06-30\"\r\n// }\r\n\r\n{\r\n    \"medicine\": \"2\",  \r\n    \"packaging_type\": \"box\",\r\n    \"price\": 252.00,\r\n    \"stock\": 25,\r\n    \"expiry_date\": \"2026-01-15\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/inventory/stocks/2/"
+			},
+			"response": []
+		},
+		{
+			"name": "Supplier Management",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{Token}}"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Medicine Company\",\r\n    \"medicines_supplied\": [3,2]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/inventory/supplier/"
+			},
+			"response": []
+		},
+		{
+			"name": "Dashboard Available Stocks",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQyMzgzMTUzLCJpYXQiOjE3NDIyOTY3NTMsImp0aSI6IjExYzMyMGJiZmFmNDQ5Nzg5NGViZTlkNWNmMDFiMDJjIiwidXNlcl9pZCI6Mn0.uhZngwURS2ADckJYAniMnMU7Kn25SWtCyogncc5jf8w"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "// {\r\n//     \"medicine\": \"2\",  // Replace with an actual category ID from your database\r\n//     \"packaging_type\": \"strip\",\r\n//     \"price\": 17.00,\r\n//     \"stock\": 200,\r\n//     \"expiry_date\": \"2025-06-30\"\r\n// }\r\n\r\n{\r\n    \"medicine\": \"2\",  \r\n    \"packaging_type\": \"box\",\r\n    \"price\": 252.00,\r\n    \"stock\": 25,\r\n    \"expiry_date\": \"2026-01-15\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/dashboard/stocks/"
+			},
+			"response": []
+		},
+		{
+			"name": "Dashboard Staff Sale Reports",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{Token}}"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customer_name\": \"test\",\r\n    \"customer_email\": \"test@test.com\",\r\n    \"items\": [\r\n        {\r\n            \"medicine\": \"2\", // Replace with an actual category ID from your database\r\n            \"packaging_type\": \"strip\",\r\n            \"quantity\": 3\r\n        },\r\n        {\r\n            \"medicine\": \"2\",\r\n            \"packaging_type\": \"box\",\r\n            \"quantity\": 3\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/dashboard/reports/staff-sale",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"dashboard",
+						"reports",
+						"staff-sale"
+					],
+					"query": [
+						{
+							"key": "created_by",
+							"value": "2",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dashboard Staff Sale Reports Copy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{Token}}"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customer_name\": \"test\",\r\n    \"customer_email\": \"test@test.com\",\r\n    \"items\": [\r\n        {\r\n            \"medicine\": \"2\", // Replace with an actual category ID from your database\r\n            \"packaging_type\": \"strip\",\r\n            \"quantity\": 3\r\n        },\r\n        {\r\n            \"medicine\": \"2\",\r\n            \"packaging_type\": \"box\",\r\n            \"quantity\": 3\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/dashboard/reports/staff-sale",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"dashboard",
+						"reports",
+						"staff-sale"
+					],
+					"query": [
+						{
+							"key": "created_by",
+							"value": "2",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Billing",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQyMzgzMTUzLCJpYXQiOjE3NDIyOTY3NTMsImp0aSI6IjExYzMyMGJiZmFmNDQ5Nzg5NGViZTlkNWNmMDFiMDJjIiwidXNlcl9pZCI6Mn0.uhZngwURS2ADckJYAniMnMU7Kn25SWtCyogncc5jf8w"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customer_name\": \"test\",\r\n    \"customer_email\": \"test@test.com\",\r\n    \"items\": [\r\n        {\r\n            \"medicine\": \"2\", // Replace with an actual category ID from your database\r\n            \"packaging_type\": \"strip\",\r\n            \"quantity\": 3\r\n        },\r\n        {\r\n            \"medicine\": \"2\",\r\n            \"packaging_type\": \"box\",\r\n            \"quantity\": 3\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/billing/"
+			},
+			"response": []
+		},
+		{
+			"name": "Notifications SSE",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQyNDcxNTg3LCJpYXQiOjE3NDIzODUxODcsImp0aSI6ImE4NmM0NWViMzA0YjQ4NGU5OWY3YjUwNmJiYWFmMmVlIiwidXNlcl9pZCI6Mn0.m7YHZvC9m4qaslfu1UHmxP-NwyE0LqJkOAKGQPS3nhY"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "text/event-stream",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": "http://localhost:8000/api/notifications/"
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": {}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQyNDgxNzc0LCJpYXQiOjE3NDIzOTUzNzQsImp0aSI6ImFlZmExMmQ3MDU5NjQyOGNiYjM5ZGVhYTAwYWQ4MThmIiwidXNlcl9pZCI6Mn0.67O6tSLx2sIrTHd9dSkjN0cr54GfMHsiv0sjTmaMMiM",
+			"type": "default"
+		}
+	]
+}
